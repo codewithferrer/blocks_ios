@@ -14,6 +14,11 @@
 		AF69E87D2A5BC7E80092605C /* blockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF69E87C2A5BC7E80092605C /* blockTests.swift */; };
 		AF69E8872A5BC7E80092605C /* blockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF69E8862A5BC7E80092605C /* blockUITests.swift */; };
 		AF69E8892A5BC7E80092605C /* blockUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF69E8882A5BC7E80092605C /* blockUITestsLaunchTests.swift */; };
+		AF69E8962A5BCBD00092605C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF69E8952A5BCBCF0092605C /* ViewModel.swift */; };
+		AF69E8982A5BCC860092605C /* SquareGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF69E8972A5BCC860092605C /* SquareGame.swift */; };
+		AF69E89B2A5BD1C20092605C /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF69E89A2A5BD1C20092605C /* Shape.swift */; };
+		AF69E89D2A5BD2DE0092605C /* GridPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF69E89C2A5BD2DE0092605C /* GridPosition.swift */; };
+		AF69E89F2A5BD4E20092605C /* OShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF69E89E2A5BD4E20092605C /* OShape.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,11 @@
 		AF69E8822A5BC7E80092605C /* blockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = blockUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF69E8862A5BC7E80092605C /* blockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = blockUITests.swift; sourceTree = "<group>"; };
 		AF69E8882A5BC7E80092605C /* blockUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = blockUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AF69E8952A5BCBCF0092605C /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		AF69E8972A5BCC860092605C /* SquareGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareGame.swift; sourceTree = "<group>"; };
+		AF69E89A2A5BD1C20092605C /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
+		AF69E89C2A5BD2DE0092605C /* GridPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridPosition.swift; sourceTree = "<group>"; };
+		AF69E89E2A5BD4E20092605C /* OShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OShape.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +104,13 @@
 		AF69E86A2A5BC7E50092605C /* block */ = {
 			isa = PBXGroup;
 			children = (
+				AF69E8992A5BD1AC0092605C /* model */,
 				AF69E86B2A5BC7E50092605C /* blockApp.swift */,
 				AF69E86D2A5BC7E50092605C /* ContentView.swift */,
+				AF69E8952A5BCBCF0092605C /* ViewModel.swift */,
 				AF69E86F2A5BC7E70092605C /* Assets.xcassets */,
 				AF69E8712A5BC7E70092605C /* Preview Content */,
+				AF69E8972A5BCC860092605C /* SquareGame.swift */,
 			);
 			path = block;
 			sourceTree = "<group>";
@@ -125,6 +138,16 @@
 				AF69E8882A5BC7E80092605C /* blockUITestsLaunchTests.swift */,
 			);
 			path = blockUITests;
+			sourceTree = "<group>";
+		};
+		AF69E8992A5BD1AC0092605C /* model */ = {
+			isa = PBXGroup;
+			children = (
+				AF69E89A2A5BD1C20092605C /* Shape.swift */,
+				AF69E89C2A5BD2DE0092605C /* GridPosition.swift */,
+				AF69E89E2A5BD4E20092605C /* OShape.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +280,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF69E89B2A5BD1C20092605C /* Shape.swift in Sources */,
 				AF69E86E2A5BC7E50092605C /* ContentView.swift in Sources */,
+				AF69E89F2A5BD4E20092605C /* OShape.swift in Sources */,
+				AF69E89D2A5BD2DE0092605C /* GridPosition.swift in Sources */,
+				AF69E8962A5BCBD00092605C /* ViewModel.swift in Sources */,
+				AF69E8982A5BCC860092605C /* SquareGame.swift in Sources */,
 				AF69E86C2A5BC7E50092605C /* blockApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
