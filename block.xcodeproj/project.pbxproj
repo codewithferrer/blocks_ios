@@ -19,6 +19,13 @@
 		AF69E89B2A5BD1C20092605C /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF69E89A2A5BD1C20092605C /* Shape.swift */; };
 		AF69E89D2A5BD2DE0092605C /* GridPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF69E89C2A5BD2DE0092605C /* GridPosition.swift */; };
 		AF69E89F2A5BD4E20092605C /* OShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF69E89E2A5BD4E20092605C /* OShape.swift */; };
+		AFE4F3572A679BF5004D966F /* IShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE4F3562A679BF5004D966F /* IShape.swift */; };
+		AFE4F3592A679C37004D966F /* TShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE4F3582A679C37004D966F /* TShape.swift */; };
+		AFE4F35B2A679C6A004D966F /* LShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE4F35A2A679C6A004D966F /* LShape.swift */; };
+		AFE4F35D2A679C8B004D966F /* JShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE4F35C2A679C8B004D966F /* JShape.swift */; };
+		AFE4F35F2A679CA6004D966F /* SShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE4F35E2A679CA6004D966F /* SShape.swift */; };
+		AFE4F3612A679CBE004D966F /* ZShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE4F3602A679CBE004D966F /* ZShape.swift */; };
+		AFE4F3642A67A08F004D966F /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE4F3632A67A08F004D966F /* ButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +61,13 @@
 		AF69E89A2A5BD1C20092605C /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
 		AF69E89C2A5BD2DE0092605C /* GridPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridPosition.swift; sourceTree = "<group>"; };
 		AF69E89E2A5BD4E20092605C /* OShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OShape.swift; sourceTree = "<group>"; };
+		AFE4F3562A679BF5004D966F /* IShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IShape.swift; sourceTree = "<group>"; };
+		AFE4F3582A679C37004D966F /* TShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TShape.swift; sourceTree = "<group>"; };
+		AFE4F35A2A679C6A004D966F /* LShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LShape.swift; sourceTree = "<group>"; };
+		AFE4F35C2A679C8B004D966F /* JShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JShape.swift; sourceTree = "<group>"; };
+		AFE4F35E2A679CA6004D966F /* SShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SShape.swift; sourceTree = "<group>"; };
+		AFE4F3602A679CBE004D966F /* ZShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZShape.swift; sourceTree = "<group>"; };
+		AFE4F3632A67A08F004D966F /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +118,7 @@
 		AF69E86A2A5BC7E50092605C /* block */ = {
 			isa = PBXGroup;
 			children = (
+				AFE4F3622A67A07C004D966F /* views */,
 				AF69E8992A5BD1AC0092605C /* model */,
 				AF69E86B2A5BC7E50092605C /* blockApp.swift */,
 				AF69E86D2A5BC7E50092605C /* ContentView.swift */,
@@ -146,8 +161,22 @@
 				AF69E89A2A5BD1C20092605C /* Shape.swift */,
 				AF69E89C2A5BD2DE0092605C /* GridPosition.swift */,
 				AF69E89E2A5BD4E20092605C /* OShape.swift */,
+				AFE4F3562A679BF5004D966F /* IShape.swift */,
+				AFE4F3582A679C37004D966F /* TShape.swift */,
+				AFE4F35A2A679C6A004D966F /* LShape.swift */,
+				AFE4F35C2A679C8B004D966F /* JShape.swift */,
+				AFE4F35E2A679CA6004D966F /* SShape.swift */,
+				AFE4F3602A679CBE004D966F /* ZShape.swift */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		AFE4F3622A67A07C004D966F /* views */ = {
+			isa = PBXGroup;
+			children = (
+				AFE4F3632A67A08F004D966F /* ButtonView.swift */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,12 +309,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFE4F35B2A679C6A004D966F /* LShape.swift in Sources */,
 				AF69E89B2A5BD1C20092605C /* Shape.swift in Sources */,
+				AFE4F3572A679BF5004D966F /* IShape.swift in Sources */,
+				AFE4F35D2A679C8B004D966F /* JShape.swift in Sources */,
 				AF69E86E2A5BC7E50092605C /* ContentView.swift in Sources */,
 				AF69E89F2A5BD4E20092605C /* OShape.swift in Sources */,
+				AFE4F3642A67A08F004D966F /* ButtonView.swift in Sources */,
 				AF69E89D2A5BD2DE0092605C /* GridPosition.swift in Sources */,
+				AFE4F35F2A679CA6004D966F /* SShape.swift in Sources */,
 				AF69E8962A5BCBD00092605C /* ViewModel.swift in Sources */,
+				AFE4F3592A679C37004D966F /* TShape.swift in Sources */,
 				AF69E8982A5BCC860092605C /* SquareGame.swift in Sources */,
+				AFE4F3612A679CBE004D966F /* ZShape.swift in Sources */,
 				AF69E86C2A5BC7E50092605C /* blockApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

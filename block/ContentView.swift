@@ -25,6 +25,9 @@ struct ContentView: View {
                 Spacer()
             }
             Spacer()
+            controls
+                .padding(.horizontal)
+                .padding(.bottom, 20)
         }
         .ignoresSafeArea(.all)
         .background(Color.black)
@@ -53,6 +56,29 @@ struct ContentView: View {
             }
             
         }
+    }
+    
+    var controls: some View {
+        HStack(spacing: 20) {
+                
+            ButtonView(iconSystemName: IconButtons.icons.arrowback) {
+                viewModel.moveLeft()
+            }
+            
+            ButtonView(iconSystemName: IconButtons.icons.arrowforward) {
+                viewModel.moveRight()
+            }
+            
+            Spacer()
+            
+            
+            ButtonView(iconSystemName: IconButtons.icons.rotateright) {
+                viewModel.rotateShape()
+            }
+            
+        }
+        .padding(.horizontal, 10)
+        .padding(.bottom, 30)
     }
 }
 

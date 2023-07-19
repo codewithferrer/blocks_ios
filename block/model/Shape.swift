@@ -64,9 +64,42 @@ extension Shape {
 
 extension Shape {
     
-    mutating func rotateToRight() { }
+    mutating func rotateToRight() {
+        if let pivot = ocuppiedPositions.first(where: { $0.isPivot == true }) {
+            
+            let px = pivot.x
+            let py = pivot.y
+            
+            for index in ocuppiedPositions.indices {
+                let y1 = ocuppiedPositions[index].y
+                let x1 = ocuppiedPositions[index].x
+                
+                let x2 = (y1 + px - py)
+                let y2 = (px + py - x1)
+                
+                ocuppiedPositions[index].x = x2
+                ocuppiedPositions[index].y = y2
+            }
+        }
+    }
     
-    mutating func rotateToLeft() { }
+    mutating func rotateToLeft() {
+        if let pivot = ocuppiedPositions.first(where: { $0.isPivot == true }) {
+            let px = pivot.x
+            let py = pivot.y
+            
+            for index in ocuppiedPositions.indices {
+                let y1 = ocuppiedPositions[index].y
+                let x1 = ocuppiedPositions[index].x
+                
+                let x2 = (px + py - y1)
+                let y2 = (x1 + py - px)
+                
+                ocuppiedPositions[index].x = x2
+                ocuppiedPositions[index].y = y2
+            }
+        }
+    }
     
 }
 

@@ -23,7 +23,7 @@ class ViewModel: ObservableObject {
         boardMatrix = Array(repeating: Array(repeating: nil, count: width), count: height)
         
         if activeShape == nil {
-            activeShape = OShape()
+            activeShape = createRamdonShape()
         }
         
         timer
@@ -56,6 +56,34 @@ class ViewModel: ObservableObject {
         }
         
         return nil
+    }
+    
+    func moveLeft() {
+        activeShape?.moveLeft()
+    }
+    
+    func moveRight() {
+        activeShape?.moveRight()
+    }
+    
+    func rotateShape() {
+        activeShape?.rotateToRight()
+    }
+    
+    func createRamdonShape() -> Shape {
+        let value = Int.random(in: 0..<7)
+        
+        switch(value) {
+            case 0: return OShape()
+            case 1: return IShape()
+            case 2: return TShape()
+            case 3: return LShape()
+            case 4: return JShape()
+            case 5: return SShape()
+            case 6: return ZShape()
+            default: return OShape()
+        }
+        
     }
     
     
