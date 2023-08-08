@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF5A15182A80A6C300361FEC /* dsdigit.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF5A15132A80A6C300361FEC /* dsdigit.ttf */; };
+		AF5A15192A80A6C300361FEC /* dsdigib.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF5A15142A80A6C300361FEC /* dsdigib.ttf */; };
+		AF5A151A2A80A6C300361FEC /* digital-7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF5A15152A80A6C300361FEC /* digital-7.ttf */; };
+		AF5A151B2A80A6C300361FEC /* dsdigii.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF5A15162A80A6C300361FEC /* dsdigii.ttf */; };
+		AF5A151C2A80A6C300361FEC /* dsdigi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF5A15172A80A6C300361FEC /* dsdigi.ttf */; };
+		AF5A151F2A80A72800361FEC /* TextExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5A151E2A80A72800361FEC /* TextExtension.swift */; };
 		AF69E86C2A5BC7E50092605C /* blockApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF69E86B2A5BC7E50092605C /* blockApp.swift */; };
 		AF69E86E2A5BC7E50092605C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF69E86D2A5BC7E50092605C /* ContentView.swift */; };
 		AF69E8702A5BC7E70092605C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF69E86F2A5BC7E70092605C /* Assets.xcassets */; };
@@ -46,6 +52,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF5A15132A80A6C300361FEC /* dsdigit.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = dsdigit.ttf; sourceTree = "<group>"; };
+		AF5A15142A80A6C300361FEC /* dsdigib.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = dsdigib.ttf; sourceTree = "<group>"; };
+		AF5A15152A80A6C300361FEC /* digital-7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "digital-7.ttf"; sourceTree = "<group>"; };
+		AF5A15162A80A6C300361FEC /* dsdigii.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = dsdigii.ttf; sourceTree = "<group>"; };
+		AF5A15172A80A6C300361FEC /* dsdigi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = dsdigi.ttf; sourceTree = "<group>"; };
+		AF5A151D2A80A6D200361FEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF5A151E2A80A72800361FEC /* TextExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextExtension.swift; sourceTree = "<group>"; };
 		AF69E8682A5BC7E50092605C /* block.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = block.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF69E86B2A5BC7E50092605C /* blockApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = blockApp.swift; sourceTree = "<group>"; };
 		AF69E86D2A5BC7E50092605C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -95,6 +108,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF5A15112A80A69B00361FEC /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				AF5A15122A80A6AF00361FEC /* fonts */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		AF5A15122A80A6AF00361FEC /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AF5A15152A80A6C300361FEC /* digital-7.ttf */,
+				AF5A15172A80A6C300361FEC /* dsdigi.ttf */,
+				AF5A15142A80A6C300361FEC /* dsdigib.ttf */,
+				AF5A15162A80A6C300361FEC /* dsdigii.ttf */,
+				AF5A15132A80A6C300361FEC /* dsdigit.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 		AF69E85F2A5BC7E50092605C = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +151,8 @@
 		AF69E86A2A5BC7E50092605C /* block */ = {
 			isa = PBXGroup;
 			children = (
+				AF5A151D2A80A6D200361FEC /* Info.plist */,
+				AF5A15112A80A69B00361FEC /* resources */,
 				AFE4F3622A67A07C004D966F /* views */,
 				AF69E8992A5BD1AC0092605C /* model */,
 				AF69E86B2A5BC7E50092605C /* blockApp.swift */,
@@ -175,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				AFE4F3632A67A08F004D966F /* ButtonView.swift */,
+				AF5A151E2A80A72800361FEC /* TextExtension.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -283,8 +319,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF5A151B2A80A6C300361FEC /* dsdigii.ttf in Resources */,
+				AF5A15182A80A6C300361FEC /* dsdigit.ttf in Resources */,
+				AF5A15192A80A6C300361FEC /* dsdigib.ttf in Resources */,
 				AF69E8732A5BC7E70092605C /* Preview Assets.xcassets in Resources */,
+				AF5A151C2A80A6C300361FEC /* dsdigi.ttf in Resources */,
 				AF69E8702A5BC7E70092605C /* Assets.xcassets in Resources */,
+				AF5A151A2A80A6C300361FEC /* digital-7.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +357,7 @@
 				AF69E86E2A5BC7E50092605C /* ContentView.swift in Sources */,
 				AF69E89F2A5BD4E20092605C /* OShape.swift in Sources */,
 				AFE4F3642A67A08F004D966F /* ButtonView.swift in Sources */,
+				AF5A151F2A80A72800361FEC /* TextExtension.swift in Sources */,
 				AF69E89D2A5BD2DE0092605C /* GridPosition.swift in Sources */,
 				AFE4F35F2A679CA6004D966F /* SShape.swift in Sources */,
 				AF69E8962A5BCBD00092605C /* ViewModel.swift in Sources */,
@@ -484,6 +526,7 @@
 				DEVELOPMENT_TEAM = PYH5XH3SJ7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = block/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -513,6 +556,7 @@
 				DEVELOPMENT_TEAM = PYH5XH3SJ7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = block/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

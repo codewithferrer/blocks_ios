@@ -13,6 +13,14 @@ class ViewModel: ObservableObject {
     let width: Int = 10
     let height: Int = 26
     
+    @Published var score: Int = 0
+    @Published var level: Int = 1
+    @Published var lines: Int = 0
+    
+    private var linePerLevel: Int = 5
+    private var linesToLevelUp: Int = 5
+    @Published var speed: Double = 0.5
+    
     @Published var boardMatrix: [[SquareGame?]]
     @Published var activeShape: Shape? = nil
     
@@ -54,6 +62,15 @@ class ViewModel: ObservableObject {
             storeShapeInGrid(shape: shape)
             
             let cleared = clearAllRows()
+            
+            score += calculateScore(linesCleared: cleared, level: level)
+            
+            lines += cleared
+            
+            linesToLevelUp -= cleared
+            if linesToLevelUp <= 0 {
+                levelUp()
+            }
         }
     }
     
@@ -220,6 +237,41 @@ class ViewModel: ObservableObject {
                 boardMatrix[y + 1][index] = nil
             }
             boardMatrix[y][index] = nil
+        }
+    }
+    
+    func calculateScore(linesCleared: Int, level: Int) -> Int {
+        //clear one line --> 40 points x level
+        //clear two lines --> 100 points x level
+        //clear three lines --> 300 points x level
+        //clear four lines --> 1200 points x level
+        var score = 0
+        switch(linesCleared) {
+        case 1: score = 40 * level
+        case 2: score = 100 * level
+        case 3: score = 300 * level
+        case 4: score = 1200 * level
+        default: score = 0
+        }
+        return score
+    }
+    
+    func levelUp() {
+        level += 1
+        linesToLevelUp = level * linePerLevel
+        
+        
+        if speed >= 0.1 {
+            speed -= 0.05
+            
+            cancellableSet = []
+            
+            timer = Timer.publish(every: speed, on: .main, in: .common)
+            
+            timer
+                .autoconnect().sink { timer in
+                    self.moveDown()
+                }.store(in: &cancellableSet)
         }
     }
 }
