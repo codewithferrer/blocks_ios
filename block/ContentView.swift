@@ -13,6 +13,7 @@ struct ContentView: View {
     
     let boxSize: CGFloat = 20.0
     let spacing: CGFloat = 2.0
+    var boxNextSize: CGFloat = 10.0
     
     var titleTextSize: FontSize = .s24
     var infoTextSize: FontSize = .s20
@@ -77,8 +78,41 @@ struct ContentView: View {
         }
     }
     
+    var nextShape: some View {
+        VStack {
+            Text("NEXT")
+                .foregroundColor(Color.white)
+                .font(size: titleTextSize, type: .bold)
+            
+            VStack(spacing: spacing) {
+                        
+                ForEach(-1...2, id:\.self) { y in
+                    
+                    HStack(spacing: spacing) {
+                        
+                        ForEach(3...6, id:\.self) { x in
+                            
+                            let color = colorNextShape(x: x, y: y) ?? Color.gray.opacity(0.2)
+                            
+                            Rectangle()
+                                .aspectRatio(1.0, contentMode: .fit)
+                                .foregroundColor(color)
+                                .frame(width: boxNextSize, height: boxNextSize)
+                                .padding(0)
+                        }
+                    }
+                }
+            }.padding(.top, 4)
+            
+        }
+        .padding(.bottom, 8)
+    }
+    
     var scoreboard: some View {
         VStack {
+            
+            nextShape
+            
             Text("LEVEL")
                 .font(size: titleTextSize, type: .bold)
                 .padding(.bottom, titlePaddingBottom)
@@ -137,6 +171,18 @@ struct ContentView: View {
         }
         .padding(.horizontal, 10)
         .padding(.bottom, 30)
+    }
+    
+    private func colorNextShape(x: Int, y: Int) -> Color? {
+        if let shape = viewModel.nextActiveShape,
+           let _ = shape.ocuppiedPositions.first(where: {
+               $0.y == y && $0.x == x
+           })
+        {
+            return shape.color
+        }
+        
+        return nil
     }
 }
 
