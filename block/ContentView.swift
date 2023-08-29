@@ -33,21 +33,26 @@ struct ContentView: View {
     }
     
     var body: some View {
-        VStack {
-            HStack {
-                VStack {
-                    board
+        ZStack {
+            VStack {
+                HStack {
+                    VStack {
+                        board
+                    }
+                    .padding(.top, 80)
+                    .padding(.horizontal, 20)
+                    Spacer()
+                    
+                    scoreboard
                 }
-                .padding(.top, 80)
-                .padding(.horizontal, 20)
                 Spacer()
-                
-                scoreboard
+                controls
+                    .padding(.horizontal)
+                    .padding(.bottom, 20)
             }
-            Spacer()
-            controls
-                .padding(.horizontal)
-                .padding(.bottom, 20)
+            if viewModel.gameIsOver {
+                gameOver
+            }
         }
         .ignoresSafeArea(.all)
         .background(Color.black)
@@ -152,25 +157,66 @@ struct ContentView: View {
     
     var controls: some View {
         HStack(spacing: 20) {
+            if viewModel.gameIsOver || viewModel.gameIsStopped {
+                ButtonView(iconSystemName: IconButtons.icons.restart) {
+                    viewModel.restartGame()
+                }
+            } else {
+                ButtonView(iconSystemName: IconButtons.icons.arrowback) {
+                    viewModel.moveLeft()
+                }
                 
-            ButtonView(iconSystemName: IconButtons.icons.arrowback) {
-                viewModel.moveLeft()
-            }
-            
-            ButtonView(iconSystemName: IconButtons.icons.arrowforward) {
-                viewModel.moveRight()
-            }
-            
-            Spacer()
-            
-            
-            ButtonView(iconSystemName: IconButtons.icons.rotateright) {
-                viewModel.rotateShape()
+                ButtonView(iconSystemName: IconButtons.icons.arrowforward) {
+                    viewModel.moveRight()
+                }
+                
+                Spacer()
+                
+                
+                ButtonView(iconSystemName: IconButtons.icons.rotateright) {
+                    viewModel.rotateShape()
+                }
             }
             
         }
         .padding(.horizontal, 10)
         .padding(.bottom, 30)
+    }
+    
+    var gameOver: some View {
+            
+        VStack(alignment: .center) {
+            
+            Text("""
+                GAME OVER
+
+                LEVEL - \(viewModel.level)
+                LINES - \(viewModel.lines)
+                SCORE - \(viewModel.score)
+                """)
+            .font(size: .s20, type: .regular)
+            .foregroundColor(Color.white)
+            
+            .multilineTextAlignment(.center)
+            .padding()
+            .padding()
+            
+           
+            .cornerRadius(16)
+            .lineSpacing(2.2)
+            .onTapGesture {
+                viewModel.restartGame()
+            }
+
+            
+        }
+        .background(
+            RoundedRectangle(cornerRadius: 4)
+                .stroke(Color.white, lineWidth: 2)
+                .background(Color.black.opacity(0.95).cornerRadius(4))
+            
+        ).zIndex(1)
+        
     }
     
     private func colorNextShape(x: Int, y: Int) -> Color? {

@@ -25,32 +25,27 @@ class ViewModel: ObservableObject {
     @Published var activeShape: Shape? = nil
     @Published var nextActiveShape: Shape? = nil
     
+    @Published var gameIsOver: Bool = false
+    @Published var gameIsStopped: Bool = true
+    
     var timer = Timer.publish(every: 0.5, on: .main, in: .common)
     var cancellableSet: Set<AnyCancellable> = []
     
     init() {
         boardMatrix = Array(repeating: Array(repeating: nil, count: width), count: height)
-        
-        if activeShape == nil {
-            activeShape = createRamdonShape()
-            nextActiveShape = createRamdonShape()
-        }
-        
-        timer
-            .autoconnect()
-            .sink { timer in
-                self.moveDown()
-            }
-            .store(in: &cancellableSet)
     }
     
     func moveDown() {
+        if gameIsOver || gameIsStopped {
+            return
+        }
         activeShape?.moveDown()
         
         if let shape = activeShape {
             if !isInValidPosition(shape: shape) {
                 activeShape?.moveUp()
                 if isOverLimit(shape: activeShape!) {
+                    gameOver()
                     return
                 }
                 
@@ -275,6 +270,45 @@ class ViewModel: ObservableObject {
                 .autoconnect().sink { timer in
                     self.moveDown()
                 }.store(in: &cancellableSet)
+        }
+    }
+    
+    func gameOver() {
+            
+        gameIsOver = true
+        gameIsStopped = true
+        activeShape = nil
+        nextActiveShape = nil
+        
+        boardMatrix = Array(repeating: Array(repeating: nil, count: width), count: height)
+        
+    }
+    
+    func restartGame() {
+        cancellableSet = []
+            
+        level = 1
+        lines = 0
+        score = 0
+        speed = 0.5
+        linesToLevelUp = 5
+        
+        
+        timer = Timer.publish(every: speed, on: .main, in: .common)
+            
+        timer
+            .autoconnect().sink { timer in
+            self.moveDown()
+        }.store(in: &cancellableSet)
+        
+        gameIsOver = false
+        gameIsStopped = false
+        
+        boardMatrix = Array(repeating: Array(repeating: nil, count: width), count: height)
+            
+        if activeShape == nil {
+            activeShape = createRamdonShape()
+            nextActiveShape = createRamdonShape()
         }
     }
 }
