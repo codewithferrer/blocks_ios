@@ -32,6 +32,18 @@ struct ContentView: View {
         String(format: "%02i", viewModel.level)
     }
     
+    var maxScoreFormatted: String {
+        String(format: "%06i", viewModel.maxScore)
+    }
+
+    var maxLinesFormatted: String {
+        String(format: "%04i", viewModel.maxLines)
+    }
+
+    var maxLevelFormatted: String {
+        String(format: "%02i", viewModel.maxLevel)
+    }
+    
     var body: some View {
         ZStack {
             VStack {
@@ -140,6 +152,33 @@ struct ContentView: View {
                 .font(size: titleTextSize, type: .bold)
                 .padding(.bottom, titlePaddingBottom)
             Text(scoreFormatted)
+                .font(size: infoTextSize, type: .digital)
+            
+            Spacer()
+                .frame(height: spacerHeight)
+
+            Text("M LEVEL")
+                .font(size: titleTextSize, type: .bold)
+                .padding(.bottom, titlePaddingBottom)
+            Text(maxLevelFormatted)
+                .font(size: infoTextSize, type: .digital)
+
+            Spacer()
+                .frame(height: spacerHeight)
+
+            Text("M LINES")
+                .font(size: titleTextSize, type: .bold)
+                .padding(.bottom, titlePaddingBottom)
+            Text(maxLinesFormatted)
+                .font(size: infoTextSize, type: .digital)
+
+            Spacer()
+                .frame(height: spacerHeight)
+
+            Text("M SCORE")
+                .font(size: titleTextSize, type: .bold)
+                .padding(.bottom, titlePaddingBottom)
+            Text(maxScoreFormatted)
                 .font(size: infoTextSize, type: .digital)
             
         }

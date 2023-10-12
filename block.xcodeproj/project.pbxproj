@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF3D3E492ACE73C0007E53FE /* UserDefaultPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D3E482ACE73C0007E53FE /* UserDefaultPropertyWrapper.swift */; };
 		AF5A15182A80A6C300361FEC /* dsdigit.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF5A15132A80A6C300361FEC /* dsdigit.ttf */; };
 		AF5A15192A80A6C300361FEC /* dsdigib.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF5A15142A80A6C300361FEC /* dsdigib.ttf */; };
 		AF5A151A2A80A6C300361FEC /* digital-7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF5A15152A80A6C300361FEC /* digital-7.ttf */; };
@@ -52,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF3D3E482ACE73C0007E53FE /* UserDefaultPropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultPropertyWrapper.swift; sourceTree = "<group>"; };
 		AF5A15132A80A6C300361FEC /* dsdigit.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = dsdigit.ttf; sourceTree = "<group>"; };
 		AF5A15142A80A6C300361FEC /* dsdigib.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = dsdigib.ttf; sourceTree = "<group>"; };
 		AF5A15152A80A6C300361FEC /* digital-7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "digital-7.ttf"; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				AFE4F35C2A679C8B004D966F /* JShape.swift */,
 				AFE4F35E2A679CA6004D966F /* SShape.swift */,
 				AFE4F3602A679CBE004D966F /* ZShape.swift */,
+				AF3D3E482ACE73C0007E53FE /* UserDefaultPropertyWrapper.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 				AF5A151F2A80A72800361FEC /* TextExtension.swift in Sources */,
 				AF69E89D2A5BD2DE0092605C /* GridPosition.swift in Sources */,
 				AFE4F35F2A679CA6004D966F /* SShape.swift in Sources */,
+				AF3D3E492ACE73C0007E53FE /* UserDefaultPropertyWrapper.swift in Sources */,
 				AF69E8962A5BCBD00092605C /* ViewModel.swift in Sources */,
 				AFE4F3592A679C37004D966F /* TShape.swift in Sources */,
 				AF69E8982A5BCC860092605C /* SquareGame.swift in Sources */,

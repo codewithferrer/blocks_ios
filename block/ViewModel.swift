@@ -8,6 +8,13 @@
 import Foundation
 import Combine
 
+enum UserDefaultKeysEnum: String {
+    case none = "NONE"
+    case maxScore = "MAX_SCORE"
+    case maxLines = "MAX_LINES"
+    case maxLevel = "MAX_LEVEL"
+}
+
 class ViewModel: ObservableObject {
     
     let width: Int = 10
@@ -27,6 +34,10 @@ class ViewModel: ObservableObject {
     
     @Published var gameIsOver: Bool = false
     @Published var gameIsStopped: Bool = true
+    
+    @MaxScore(key: .maxScore) var maxScore: Int
+    @MaxScore(key: .maxLines) var maxLines: Int
+    @MaxScore(key: .maxLevel) var maxLevel: Int
     
     var timer = Timer.publish(every: 0.5, on: .main, in: .common)
     var cancellableSet: Set<AnyCancellable> = []
@@ -63,6 +74,10 @@ class ViewModel: ObservableObject {
             score += calculateScore(linesCleared: cleared, level: level)
             
             lines += cleared
+            
+            maxLines = lines
+
+            maxScore = score
             
             linesToLevelUp -= cleared
             if linesToLevelUp <= 0 {
@@ -258,6 +273,7 @@ class ViewModel: ObservableObject {
         level += 1
         linesToLevelUp = level * linePerLevel
         
+        maxLevel = level
         
         if speed >= 0.1 {
             speed -= 0.05
