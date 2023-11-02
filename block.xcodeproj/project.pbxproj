@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF0802082AEF7A1500F7571F /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = AF0802072AEF7A1500F7571F /* Localizable.xcstrings */; };
+		AF08020A2AEF7E2500F7571F /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = AF0802092AEF7E2500F7571F /* InfoPlist.xcstrings */; };
 		AF3D3E492ACE73C0007E53FE /* UserDefaultPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D3E482ACE73C0007E53FE /* UserDefaultPropertyWrapper.swift */; };
 		AF5A15182A80A6C300361FEC /* dsdigit.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF5A15132A80A6C300361FEC /* dsdigit.ttf */; };
 		AF5A15192A80A6C300361FEC /* dsdigib.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF5A15142A80A6C300361FEC /* dsdigib.ttf */; };
@@ -53,6 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF0802072AEF7A1500F7571F /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		AF0802092AEF7E2500F7571F /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
 		AF3D3E482ACE73C0007E53FE /* UserDefaultPropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultPropertyWrapper.swift; sourceTree = "<group>"; };
 		AF5A15132A80A6C300361FEC /* dsdigit.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = dsdigit.ttf; sourceTree = "<group>"; };
 		AF5A15142A80A6C300361FEC /* dsdigib.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = dsdigib.ttf; sourceTree = "<group>"; };
@@ -159,6 +163,8 @@
 				AF69E8992A5BD1AC0092605C /* model */,
 				AF69E86B2A5BC7E50092605C /* blockApp.swift */,
 				AF69E86D2A5BC7E50092605C /* ContentView.swift */,
+				AF0802072AEF7A1500F7571F /* Localizable.xcstrings */,
+				AF0802092AEF7E2500F7571F /* InfoPlist.xcstrings */,
 				AF69E8952A5BCBCF0092605C /* ViewModel.swift */,
 				AF69E86F2A5BC7E70092605C /* Assets.xcassets */,
 				AF69E8712A5BC7E70092605C /* Preview Content */,
@@ -304,6 +310,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = AF69E85F2A5BC7E50092605C;
 			productRefGroup = AF69E8692A5BC7E50092605C /* Products */;
@@ -324,6 +331,8 @@
 			files = (
 				AF5A151B2A80A6C300361FEC /* dsdigii.ttf in Resources */,
 				AF5A15182A80A6C300361FEC /* dsdigit.ttf in Resources */,
+				AF0802082AEF7A1500F7571F /* Localizable.xcstrings in Resources */,
+				AF08020A2AEF7E2500F7571F /* InfoPlist.xcstrings in Resources */,
 				AF5A15192A80A6C300361FEC /* dsdigib.ttf in Resources */,
 				AF69E8732A5BC7E70092605C /* Preview Assets.xcassets in Resources */,
 				AF5A151C2A80A6C300361FEC /* dsdigi.ttf in Resources */,
@@ -456,6 +465,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -510,6 +520,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

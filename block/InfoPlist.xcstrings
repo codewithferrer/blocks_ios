@@ -11,10 +11,16 @@
             "value" : "block"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "block"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "CFBundleName"
+            "value" : "block"
           }
         }
       }
